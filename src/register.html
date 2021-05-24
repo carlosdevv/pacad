@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/register.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pacad | Registrar</title>
+  </head>
+  <body>
+    <section class="s-register">
+      <div class="container-form">
+        <div class="s-title">
+          <h5>Criar Conta</h5>
+          <p>
+            Preencha os campos abaixo para continuarmos avançando com o seu
+            cadastro.
+          </p>
+        </div>
+
+        <form
+          type="submit"
+          class="register-form"
+          autocomplete="off"
+          method="post"
+        >
+          <div class="input-container">
+            <img src="./assets/profile.svg" alt="" />
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Digite seu nome"
+              required
+            />
+          </div>
+
+          <div class="input-container">
+            <img src="./assets/email.svg" alt="" />
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
+          </div>
+
+          <div class="input-container">
+            <img src="./assets/company.svg" alt="" />
+            <input
+              id="company-name"
+              type="text"
+              name="company-name"
+              placeholder="Nome da empresa"
+              required
+            />
+          </div>
+
+          <div class="input-container">
+            <img src="./assets/cellphone.svg" alt="" />
+            <input
+              id="cellphone"
+              type="text"
+              name="cellphone"
+              placeholder="Digite seu celular"
+              required
+            />
+          </div>
+
+          <div class="input-container">
+            <img src="./assets/shield.svg" alt="" />
+            <input
+              oninput="mascara(this)"
+              id="cpf"
+              type="text"
+              name="cpf"
+              placeholder="Digite seu Cpf"
+              required
+            />
+          </div>
+
+          <div class="input-container">
+            <img src="./assets/lock.svg" alt="" />
+            <input
+              id="password"
+              type="password"
+              name="password"
+              placeholder="Digite sua senha"
+              required
+            />
+          </div>
+
+          <div class="input-container">
+            <img src="./assets/lock.svg" alt="" />
+            <input
+              id="confirm_password"
+              type="password"
+              name="password"
+              placeholder="Confirme sua senha"
+              required
+            />
+          </div>
+
+          <div class="register-button">
+            <button type="submit">Criar Conta</button>
+          </div>
+        </form>
+      </div>
+
+      <span class="login-account">
+        Já tem uma conta?
+        <a href=""> Entrar.</a>
+      </span>
+    </section>
+  </body>
+
+  <script>
+    function mascara(i) {
+      var v = i.value;
+
+      if (isNaN(v[v.length - 1])) {
+        // impede entrar outro caractere que não seja número
+        i.value = v.substring(0, v.length - 1);
+        return;
+      }
+
+      i.setAttribute("maxlength", "14");
+      if (v.length == 3 || v.length == 7) i.value += ".";
+      if (v.length == 11) i.value += "-";
+    }
+
+    var password = document.getElementById("password"),
+      confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword() {
+      if (password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("Senhas diferentes");
+      } else {
+        confirm_password.setCustomValidity("");
+      }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+  <script type="text/javascript">
+    $("#telefone, #cellphone").mask("(00) 0 0000-0000");
+  </script>
+</html>
