@@ -76,7 +76,17 @@ strong {
 }
 
 .container-form img {
-  width: 192px;
+  width: 212px;
+}
+
+.s-title {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.s-title img {
+  width: 35px;
+  height: 35px;
 }
 
 .s-login .s-title {
@@ -98,7 +108,8 @@ strong {
   font-size: 2rem;
   line-height: 115.5%;
   font-family: "Montserrat";
-  color: #f6f7fa;
+  color: #212121;
+  margin-left: 1rem;
 }
 
 .login-form {
@@ -141,7 +152,7 @@ strong {
   color: #fafbff;
   outline: none;
   padding: 12px 20px 12px 15px;
-  background: #09090C;
+  background: #09090c;
 }
 
 .input-container input::placeholder {
