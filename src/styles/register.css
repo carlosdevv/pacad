@@ -39,8 +39,7 @@ strong {
   min-height: 100vh;
   padding: 40px;
 
-  background-color: #121218;
-  background: url("../assets/bg_1.png") no-repeat 100%;
+  background-color: #181820;
 }
 
 @media (max-width: 480px) {
@@ -50,8 +49,8 @@ strong {
     align-items: center;
     justify-content: center;
     padding: 0 0 3rem 0;
-  
-    background-color: #121218;
+
+    background-color: #181820;
   }
 }
 
@@ -66,6 +65,7 @@ strong {
   padding: 0 40px 40px 40px;
   background: #121218;
   border-radius: 8px;
+  box-shadow: 0px 8px 36px black;
 }
 
 .s-register .s-title {
