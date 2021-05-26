@@ -37,7 +37,7 @@ strong {
   width: 100%;
   min-height: 100vh;
 
-  background: url("../assets/bg_1.png") no-repeat 100%;
+  background: url("../assets/bg_3.png") no-repeat 100%;
 }
 
 @media (max-width: 480px) {
@@ -100,7 +100,7 @@ strong {
   width: 100%;
   display: grid;
   grid-gap: 16px;
-  gap: 24px;
+  gap: 12px;
   grid-template-columns: repeat(1, 1fr);
 }
 
@@ -119,6 +119,7 @@ strong {
   font-size: 0.6rem;
   font-family: "Montserrat";
 }
+
 
 .input-container img {
   width: 20px;
